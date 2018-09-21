@@ -76,8 +76,8 @@ func main() {
 	s.HandleFunc("/", foo.addHandler).Methods("POST")
 	s.HandleFunc("/", foo.redirectHandler).Methods("GET")
 
-	log.Printf("Staring HTTPS service on %s ...\n", ":443")
-	if err := http.ListenAndServe(":443", s); err != nil {
+	log.Printf("Staring HTTPS service on %s ...\n", ":4545")
+	if err := http.ListenAndServe(":4545", s); err != nil {
 		panic(err)
 	}
 }
