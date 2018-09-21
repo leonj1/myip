@@ -60,7 +60,7 @@ func (m *MyStruct) addHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func (m *MyStruct) redirectHandler(w http.ResponseWriter, r *http.Request) {
-	redirectIp := fmt.Sprintf("http://%s", m.ip)
+	redirectIp := fmt.Sprintf("http://%s:8123", m.ip)
 	http.Redirect(w, r, redirectIp, 301)
 }
 
